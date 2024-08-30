@@ -1,5 +1,4 @@
-<html>
-  <head>
+<html><head>
     <title>淘源小生public</title>
     <meta charset="UTF-8">
   </head>
@@ -8,8 +7,10 @@
     <h1 class="center">rocstq.github.io</h1>
 	<a href="https://tyxs98.github.io">
 	<h1 class="center">主页</h1>
+	<h1 class="center" id="time">time</h1>
+	<h1 class="center" id="clickCounter">点击了0次</h1>
 	</a>
-  </body>
+  
   <style>
     .center{
       display:flex;
@@ -17,4 +18,20 @@
       flex-wrap: nowrap; 
     }
   </style>
-</html>
+  <script>
+		function updateTime() {
+			const now = new Date();
+			const timeString = now.toLocaleTimeString();
+			document.getElementById('time').textContent = timeString;
+		}
+		setInterval(updateTime, 1000);
+		updateTime();
+  </script>
+  <script>
+		let count = 0;
+		document.addEventListener('click', function () {
+			count++;
+			document.getElementById('clickCounter').textContent = `点击了 ${count} 次`;
+		});
+  </script>
+<!----></body></html>
