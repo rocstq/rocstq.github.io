@@ -4,13 +4,12 @@
   </head>
   <body>
     <h1 class="center">hello</h1>
-    <h1 class="center">rocstq.github.io</h1>
+    <h1 class="center" id="host"></h1>
 	<a href="https://tyxs98.github.io">
-	<h1 class="center">跳转淘源网络</h1>
-	</a>
+	<h1 class="center">主页</h1>
 	<h1 class="center" id="time">time</h1>
 	<h1 class="center" id="clickCounter">点击了0次</h1>
-	
+	</a>
   
   <style>
     .center{
@@ -34,5 +33,9 @@
 			count++;
 			document.getElementById('clickCounter').textContent = `点击了 ${count} 次`;
 		});
+  </script>
+  <script>
+		const domain = window.location.hostname;
+		document.getElementById('host').textContent = domain
   </script>
 <!----></body></html>
